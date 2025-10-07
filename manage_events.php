@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once "../php/db.php";
+require_once "db.php";
 
 // Only admin access
 if (!isset($_SESSION['username'])) {
@@ -34,7 +34,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['add_event'])) {
 if (isset($_GET['delete'])) {
     $id = intval($_GET['delete']);
     $pdo->prepare("DELETE FROM events WHERE event_id = ?")->execute([$id]);
-    header("Location: ../php/manage_events.php");
+    header("Location: manage_events.php");
     exit;
 }
 
@@ -49,7 +49,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['update_event'])) {
 
     $stmt = $pdo->prepare("UPDATE events SET event_name = ?, event_date = ?, event_time = ?, location = ?, description = ? WHERE event_id = ?");
     $stmt->execute([$name, $date, $time, $location, $description, $id]);
-    header("Location: ../php/manage_events.php");
+    header("Location: manage_events.php");
     exit;
 }
 
@@ -110,7 +110,7 @@ if (isset($_GET['edit'])) {
         <?= $edit_event ? "Update Event" : "Add Event" ?>
     </button>
     <?php if($edit_event): ?>
-        <a href="../php/manage_events.php">Cancel Edit</a>
+        <a href="manage_events.php">Cancel Edit</a>
     <?php endif; ?>
 </form>
 
@@ -142,3 +142,4 @@ if (isset($_GET['edit'])) {
 </table>
 </body>
 </html>
+
