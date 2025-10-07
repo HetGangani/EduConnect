@@ -1,5 +1,5 @@
 <?php
-require_once "../php/db.php";
+require_once db.php";
 
 try {
     // Create normalized student table
@@ -17,4 +17,5 @@ try {
 } catch (PDOException $e) {
     echo "❌ Error: " . $e->getMessage();
 }
+
 ?>
