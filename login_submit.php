@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once "../php/db.php"; // include your DB connection file
+require_once "db.php"; // include your DB connection file
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $username = trim($_POST['username']);
@@ -19,9 +19,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         // Redirect based on role
         if ($user['role'] === 'admin') {
-            header("Location: ../php/manage_events.php");
+            header("Location: manage_events.php");
         } else {
-            header("Location: ../phpdashboard.php");
+            header("Location: dashboard.php");
         }
         exit;
     } else {
@@ -29,3 +29,4 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 }
 ?>
+
