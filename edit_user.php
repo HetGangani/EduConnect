@@ -1,16 +1,16 @@
 <?php
 session_start();
-require_once "../php/db.php";
+require_once "db.php";
 
 // Only admin can access
 if (!isset($_SESSION['username']) || $_SESSION['role'] !== 'admin') {
-    header("Location: ../html/login.html");
+    header("Location: login.html");
     exit;
 }
 
 // Get user ID
 if (!isset($_GET['id'])) {
-    header("Location: ../php/manage_users.php");
+    header("Location: manage_users.php");
     exit;
 }
 
@@ -52,7 +52,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             $stmt = $pdo->prepare("UPDATE users SET username=?, email=?, phone=?, role=? WHERE user_id=?");
             $stmt->execute([$username, $email, $phone, $role, $user_id]);
         }
-        header("Location: ../php/manage_users.php");
+        header("Location: manage_users.php");
         exit;
     }
 }
@@ -91,3 +91,4 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 <p><a href="../php/manage_users.php">Back to Manage Users</a></p>
 </body>
 </html>
+
