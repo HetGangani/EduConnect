@@ -1,5 +1,5 @@
 <?php
-require_once "../php/db.php"; // Make sure db_connect.php points to your existing DB
+require_once "db.php"; // Make sure db_connect.php points to your existing DB
 
 try {
     $sql = "CREATE TABLE IF NOT EXISTS events (
@@ -18,3 +18,4 @@ try {
     echo "❌ Error creating table: " . $e->getMessage();
 }
 ?>
+
