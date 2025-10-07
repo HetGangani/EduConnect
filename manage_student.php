@@ -1,5 +1,5 @@
 <?php
-require_once "../php/db.php";
+require_once "db.php";
 
 // Handle insert form
 if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['add_student'])) {
@@ -21,7 +21,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['add_student'])) {
 if (isset($_GET['delete'])) {
     $id = intval($_GET['delete']);
     $pdo->prepare("DELETE FROM students WHERE student_id = ?")->execute([$id]);
-    header("Location: ../php/manage_students.php");
+    header("Location: manage_students.php");
     exit;
 }
 
@@ -42,7 +42,7 @@ $students = $stmt->fetchAll(PDO::FETCH_ASSOC);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Manage Students | StudentHub</title>
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="style.css">
     <style>
         body { font-family: Arial, sans-serif; margin: 20px; }
         form { margin-bottom: 20px; }
@@ -71,7 +71,7 @@ $students = $stmt->fetchAll(PDO::FETCH_ASSOC);
 <form method="GET">
     <input type="text" name="search" placeholder="Enter name..." value="<?= htmlspecialchars($searchTerm) ?>">
     <button type="submit">Search</button>
-    <a href="../php/manage_students.php">Reset</a>
+    <a href="manage_students.php">Reset</a>
 </form>
 
 <h2>Student List</h2>
@@ -99,3 +99,4 @@ $students = $stmt->fetchAll(PDO::FETCH_ASSOC);
 </table>
 </body>
 </html>
+
