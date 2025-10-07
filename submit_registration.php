@@ -1,5 +1,5 @@
 <?php
-require_once "../php/db.php";
+require_once "db.php";
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     // Sanitize
@@ -29,7 +29,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     try {
         $stmt = $pdo->prepare("INSERT INTO users (username, password, role) VALUES (?, ?, 'user')");
         $stmt->execute([$username, $hashedPassword]);
-        header("Location: ../php/success.php");
+        header("Location: success.php");
         exit;
     } catch (PDOException $e) {
         if ($e->getCode() == 23000) {
@@ -40,3 +40,4 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     }
 }
 ?>
+
