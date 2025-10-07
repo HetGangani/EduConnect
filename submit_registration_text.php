@@ -23,14 +23,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $dataLine = "Name: $name | Email: $email | Username: $username | Password: $hashedPassword\n";
 
     // File path
-    $file = "../data/registration_data.txt";
+    $file = "registration_data.txt";
 
     // Append data to file
     if(file_put_contents($file, $dataLine, FILE_APPEND | LOCK_EX)) {
         echo "<h2>Registration successful!</h2>";
-        echo "<p><a href='../html/login.html'>Click here to login</a></p>";
+        echo "<p><a href='login.html'>Click here to login</a></p>";
     } else {
         echo "Error: Unable to save data. Check folder permissions.";
     }
 }
 ?>
+
