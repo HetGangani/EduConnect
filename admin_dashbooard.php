@@ -4,7 +4,7 @@ require_once "../php/db.php";
 
 // Only allow admin
 if (!isset($_SESSION['username']) || $_SESSION['role'] !== 'admin') {
-    header("Location: ../html/login.html");
+    header("Location: login.html");
     exit;
 }
 
@@ -18,11 +18,11 @@ $users = $stmt->fetchAll(PDO::FETCH_ASSOC);
 <head>
 <meta charset="UTF-8">
 <title>Admin Dashboard | EduConnect</title>
-<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 <h2>Admin Dashboard - Manage Users</h2>
-<p>Welcome, <?php echo $_SESSION['username']; ?> | <a href="../php/logout.php">Logout</a></p>
+<p>Welcome, <?php echo $_SESSION['username']; ?> | <a href="logout.php">Logout</a></p>
 
 <table border="1" cellpadding="10">
     <thead>
@@ -44,8 +44,8 @@ $users = $stmt->fetchAll(PDO::FETCH_ASSOC);
             <td><?= htmlspecialchars($user['phone']) ?></td>
             <td><?= $user['role'] ?></td>
             <td>
-                <a href="./php/edit_users.php?id=<?= $user['user_id'] ?>">Edit</a> | 
-                <a href="../php/delete_users.php?id=<?= $user['user_id'] ?>" onclick="return confirm('Delete this user?')">Delete</a>
+                <a href="edit_users.php?id=<?= $user['user_id'] ?>">Edit</a> | 
+                <a href="delete_users.php?id=<?= $user['user_id'] ?>" onclick="return confirm('Delete this user?')">Delete</a>
             </td>
         </tr>
         <?php endforeach; ?>
@@ -53,3 +53,4 @@ $users = $stmt->fetchAll(PDO::FETCH_ASSOC);
 </table>
 </body>
 </html>
+
