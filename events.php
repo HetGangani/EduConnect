@@ -3,7 +3,7 @@ session_start();
 require 'db.php';
 
 if(!isset($_SESSION['username'])) {
-    header("Location: ../html/login.html");
+    header("Location: login.html");
     exit;
 }
 
@@ -43,7 +43,8 @@ $events = $conn->query("SELECT * FROM events ORDER BY event_date ASC")->fetchAll
 <?php endforeach; ?>
 </ul>
 
-<a href="../php/dashboard.php">Back to Dashboard</a>
+<a href="dashboard.php">Back to Dashboard</a>
 </div>
 </body>
+
 </html>
