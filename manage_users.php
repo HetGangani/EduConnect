@@ -1,10 +1,10 @@
 <?php
 session_start();
-require_once "../php/db.php";
+require_once "db.php";
 
 // Ensure only admin can access
 if (!isset($_SESSION['username']) || $_SESSION['role'] !== 'admin') {
-    header("Location: ../html/login.html");
+    header("Location: login.html");
     exit;
 }
 
@@ -19,7 +19,7 @@ $users = $stmt->fetchAll(PDO::FETCH_ASSOC);
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Admin Dashboard | EduConnect</title>
-<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="style.css">
 <style>
 body {
     font-family: "Poppins", sans-serif;
@@ -77,7 +77,7 @@ td a:hover {
 <body>
 <div class="dashboard-container">
     <h2>Admin Dashboard - Manage Users</h2>
-    <a href="../php/logout.php" class="logout">Logout</a>
+    <a href="logout.php" class="logout">Logout</a>
     <table>
         <tr>
             <th>ID</th>
@@ -95,8 +95,8 @@ td a:hover {
             <td><?= htmlspecialchars($user['phone']) ?></td>
             <td><?= htmlspecialchars($user['role']) ?></td>
             <td>
-                <a href="../php/edit_user.php?id=<?= $user['user_id'] ?>">Edit</a> |
-                <a href="../php/delete_user.php?id=<?= $user['user_id'] ?>" onclick="return confirm('Are you sure you want to delete this user?')">Delete</a>
+                <a href="edit_user.php?id=<?= $user['user_id'] ?>">Edit</a> |
+                <a href="delete_user.php?id=<?= $user['user_id'] ?>" onclick="return confirm('Are you sure you want to delete this user?')">Delete</a>
             </td>
         </tr>
         <?php endforeach; ?>
@@ -104,3 +104,4 @@ td a:hover {
 </div>
 </body>
 </html>
+
