@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Profile | EduConnect</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <style>
+    .profile-container {
+      display: flex;
+      max-width: 1000px;
+      margin: 30px auto;
+      gap: 20px;
+    }
+
+    .sidebar {
+      width: 250px;
+      background-color: #004080;
+      color: white;
+      padding: 20px;
+      border-radius: 10px;
+      height: fit-content;
+    }
+
+    .sidebar h2 {
+      margin-bottom: 15px;
+    }
+
+    .sidebar a {
+      display: block;
+      color: white;
+      text-decoration: none;
+      margin: 10px 0;
+      padding: 8px;
+      border-radius: 5px;
+    }
+
+    .sidebar a:hover {
+      background-color: #003060;
+    }
+
+    .profile-content {
+      flex: 1;
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    .profile-photo {
+      float: right;
+      margin-left: 20px;
+      border-radius: 50%;
+      width: 120px;
+      height: 120px;
+      object-fit: cover;
+    }
+
+    .info-group {
+      margin-bottom: 20px;
+    }
+
+    .info-group label {
+      font-weight: bold;
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .edit-btn {
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #004080;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .edit-btn:hover {
+      background-color: #003060;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>My Profile</h1>
+    <nav>
+      <a href="../html/index.html">Home</a> |
+      <a href="../html/dashboard.html">Dashboard</a> |
+      <a href="../html/logout.html">Logout</a>
+    </nav>
+  </header>
+
+  <main class="profile-container">
+    <aside class="sidebar">
+      <h2>Menu</h2>
+      <a href="../html/dashboard.html">🏠 Dashboard</a>
+      <a href="../html/profile.html">👤 My Profile</a>
+      <a href="../html/events.html">📅 Events</a>
+      <a href="../html/resources.html">📚 Resources</a>
+      <a href="../html/settings.html">⚙️ Settings</a>
+    </aside>
+
+    <section class="profile-content">
+      <img src="../Images/image1.jpeg" alt="Profile Picture" class="profile-photo" />
+      <h2>John Doe</h2>
+      <p>B.Tech – Computer Engineering | EduConnect University</p>
+
+      <div class="info-group">
+        <label>Email:</label>
+        <p>john.doe@example.com</p>
+      </div>
+
+      <div class="info-group">
+        <label>Phone:</label>
+        <p>+91 98765 43210</p>
+      </div>
+
+      <div class="info-group">
+        <label>Enrollment No:</label>
+        <p>EC2025CEN001</p>
+      </div>
+
+      <div class="info-group">
+        <label>Department:</label>
+        <p>Computer Engineering</p>
+      </div>
+
+      <button class="edit-btn">Edit Profile</button>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 EduConnect | Student Profile</p>
+  </footer>
+</body>
+</html>

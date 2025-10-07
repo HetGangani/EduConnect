@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Student Dashboard | EduConnect</title>
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+  <header>
+    <h1>Welcome to Your Dashboard</h1>
+    <nav>
+      <a href="../html/index.html">Home</a> |
+      <a href="../html/profile.html">My Profile</a> |
+      <a href="../html/events.html">Events</a> |
+      <a href="../html/resources.html">Resources</a> |
+      <a href="../php/manage_events.php">Manage Events</a> |
+      <a href="../php/manage_students.php">Manage Students</a> |
+      <a href="../html/logout.html">Logout</a>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>Hello, John Doe 👋</h2>
+      <p>Here's what's happening today on EduConnect:</p>
+    </section>
+
+    <section>
+      <div style="display: flex; flex-wrap: wrap; gap: 20px;">
+        <div style="flex: 1; min-width: 250px; background: #e6f0ff; padding: 20px; border-radius: 10px;">
+          <h3>📅 Upcoming Event</h3>
+          <p><strong>Hackathon 2025</strong></p>
+          <p>Date: Sept 15 | Venue: Seminar Hall</p>
+          <a href="../html/events.html">View All Events</a>
+        </div>
+
+        <div style="flex: 1; min-width: 250px; background: #fff4e6; padding: 20px; border-radius: 10px;">
+          <h3>📚 Recent Resources</h3>
+          <ul>
+            <li><a href="#">AI Notes - Unit 1</a></li>
+            <li><a href="#">DBMS Cheat Sheet</a></li>
+          </ul>
+          <a href="../html/resources.html">View All Resources</a>
+        </div>
+
+        <div style="flex: 1; min-width: 250px; background: #e6ffe6; padding: 20px; border-radius: 10px;">
+          <h3>✅ To-Do</h3>
+          <ul>
+            <li>Submit AI assignment</li>
+            <li>Register for Hackathon</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 EduConnect | Dashboard</p>
+  </footer>
+</body>
+</html>

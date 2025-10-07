@@ -1,0 +1,13 @@
+Name: Het234993 | Email: johndoe@gmail.com | Password: 12345678
+Name: Het234993 | Email: johndoe@gmail.com | Password: 12345678
+Name: Het | Email: johndoe@gmail.com | Username: cp340 | Password: 12345678
+Name: Het | Email: hetgangani214421@njemndn | Username: PH1562 | Password: 12345678
+Name: Het Gangani | Email: hetgangani123@gmail.com | Phone:  | Username: het123 | Password: $2y$10$AsXwptq6E36Dcv.QPxhZXec0Y01Do1QCeBmXbd.Ph.WRYcvGaIbFy
+Name: Het Gangani | Email: hetgangani123@gmail.com | Username: het123 | Password: $2y$10$6DyEiEWgvJBGMChPTldVHOyJzMVIWUl5FkWZ1QLz.KKX4cSEr1vb6
+Name: Het Gangani | Email: hetgangani123@gmail.com | Username: het123 | Password: $2y$10$kdVDeraWelvR2E9IWjylv.WfFe0vV74G/SbIbCZcjgP9mNy7wbFTm
+Name: Het Gangani | Email: hetgangani123@gmail.com | Username: het123 | Password: $2y$10$lwJYFExGiv383YoL.xJ/5emdnddZm19lvGf9ws./OnN1weUbpOVgy
+Name: Het | Email: hetgangani123@gmail.com | Username: hetgangani | Password: $2y$10$Ya4UGfmah9bzwX3Iph7.N.ECe3HBE.A0uoj9SsRxn3nzcx.644P/G
+Name: John | Email: admin123@gmail.com | Username: admin@123 | Password: $2y$10$ZIclsiBFz6k5qpciQR1lrebGUXrVrATCvq8b.CJYOaynuGMzoGASe
+Name: Arya | Email: aarya123@gmail.com | Username: aarya@123 | Password: $2y$10$c8uK2Ro8VO1HueUaOHNNbuTQzMGrEgltrCtu13sDdh9vmgCVO6Xhu
+Name: Arya | Email: aarya123@gmail.com | Username: aarya@123 | Password: $2y$10$Fd3Lf0D14f11tq2ztC0I9ulS7Tkr4cQRyTQJ5emfPzUpBMBVVrYxO
+Name: aarya | Email: aarya123@gmail.com | Username: aarya@123 | Password: $2y$10$.XAFN9G3l872lRDNFpNzROkYv1/Q0Elsll31DX9Iayk6.OJZVXXCe
