@@ -2,7 +2,7 @@
 <html>
 <head>
   <title>Registration Successful</title>
-  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="message success">
@@ -10,4 +10,5 @@
     <p>Thank you for joining EduConnect. You can now <a href="../html/login.html">Login</a>.</p>
   </div>
 </body>
+
 </html>
