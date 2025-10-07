@@ -1,16 +1,16 @@
 <?php
 session_start();
-require_once "../php/db.php";
+require_once "db.php";
 
 // Only admin can access
 if (!isset($_SESSION['username']) || $_SESSION['role'] !== 'admin') {
-    header("Location: ../html/login.html");
+    header("Location: login.html");
     exit;
 }
 
 // Get user ID
 if (!isset($_GET['id'])) {
-    header("Location: ../php/manage_users.php");
+    header("Location: manage_users.php");
     exit;
 }
 
@@ -26,6 +26,7 @@ if ($_SESSION['username'] === 'admin' && $user_id == 1) {
 $stmt = $pdo->prepare("DELETE FROM users WHERE user_id=?");
 $stmt->execute([$user_id]);
 
-header("Location: ../php/manage_users.php");
+header("Location: manage_users.php");
 exit;
 ?>
+
